@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Belanja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daftar Belanja</h1>
+
+    <form id="belanjaForm">
+      <input type="text" id="namaBarang" placeholder="Nama Barang" step="0.01" required>
+      <input type="number" id="hargaBarang" placeholder="Harga Barang" step="0.01" required>
+      <div style="display: flex; gap: 10px;">
+        <button type="submit">Tambah</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <table id="tabelBelanja" class="hidden">
+      <thead>
+        <tr>
+          <th>Nama Barang</th>
+          <th>Harga (Rp)</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <th id="totalHarga" colspan="2">Rp 0,00</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <a href="index.html" class="back">⬅ Kembali ke Menu</a>
+  </div>
+
+  <script src="script/shop.js"></script>
+</body>
+</html>
