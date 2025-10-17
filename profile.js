@@ -1,6 +1,6 @@
 const container = document.getElementById('biodataContainer');
 
-fetch('../user.json')
+fetch('https://github.com/naaa032/myweb.pt2/blob/main/user.json')
   .then(response => {
     if (!response.ok) throw new Error('Gagal memuat data biodata');
     return response.json();
@@ -20,3 +20,4 @@ fetch('../user.json')
   .catch(error => {
     container.innerHTML = `<p style="color:red;">${error.message}</p>`;
   });
+
